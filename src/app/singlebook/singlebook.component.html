@@ -1,0 +1,58 @@
+
+<app-header></app-header>
+
+
+<div class="container">
+    <div class="row">
+      
+      <div class="col-md-12"> 
+        
+        <div class="panel">
+          <div class="panel-body">
+            
+            
+            
+            <!--/stories-->
+            
+  
+            <div class="row" *ngFor="let r of res">    
+              <br>
+              <div class="col-md-2 col-sm-3 text-center">
+                <a class="story-title" href="http://localhost:8000/books/view/{{r.urlToImage}}"><img alt="" src="http://localhost:8000/books/view/{{r.urlToImage}}" style="width:95px;height:150px"></a>
+              </div>
+              <div class="col-md-10 col-sm-9">
+                <h3>{{r.bookTitle}}  </h3>
+                <div class="row">
+                  <div class="col-xs-9">
+                    <h4><span class="label label-default">{{r.author}} </span></h4><h4>
+                    <small style="font-family:courier,'new courier';" class="text-muted">{{ r.genre}}  • &#x20b9;{{r.price}}   • </small>
+                    </h4>
+                    {{r.description}}</div>
+                  <div class="col-xs-3">
+                     
+                  </div>
+                </div>
+                <br><br>
+              </div>
+            </div>
+            <hr>
+          
+            <!--/stories-->
+            
+            
+            
+          </div>
+        </div>
+                                                                                         
+                                                      
+                                                        
+         </div><!--/col-12-->
+    </div>
+  </div>
+                                                  
+                                                                                  
+  <hr>
+
+
+
+<app-footer></app-footer>

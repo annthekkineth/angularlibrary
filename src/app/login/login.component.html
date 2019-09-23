@@ -1,0 +1,161 @@
+<header class="navbar navbar-bright navbar-fixed-top" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <!-- <a href="/index" class="navbar-brand">Home</a> -->
+    </div>
+    <nav class="collapse navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav">
+      
+        <li>
+          <a href="#" > Home</a>
+        </li>
+    
+      </ul>
+      
+    </nav>
+  </div>
+</header>
+
+<div id="masthead">  
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7">
+        <h1>{{ title }} 
+          <p class="lead"></p>
+        </h1>
+      </div>
+      <div class="col-md-5">
+        <div class="well well-lg"> 
+          <div class="row">
+            <div class="col-sm-12">
+              
+			
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> 
+  </div><!-- /cont -->
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="top-spacer"> </div>
+      </div>
+    </div> 
+  </div><!-- /cont -->
+  
+</div>
+
+
+<div class="container">
+  <div class="row">
+    
+    <div class="col-md-12"> 
+      
+      <div class="panel">
+        <div class="panel-body">
+          
+          <div class="card-body">
+            <div class="row justify-content-center ">
+                <div class="col col-12 col-sm-12 col-md-6 col-lg-6" *ngIf="logview">    
+                    <div class="card" id="card1">
+                        <h5 class="card-header text-center"> Login </h5>
+                        <div class="card-body">
+                            
+                                <table class="table table-borderless">
+                                    <tr>
+                                        <td> Username </td>
+                                        <td> <input type="text" class="form-control" [(ngModel)]="username" required> </td>
+                                    </tr><br>
+                                    <tr>
+                                        <td> Password </td>
+                                        <td> <input type="password"  [(ngModel)]="password" class="form-control" required> </td>
+                                    </tr><br>
+                                    <tr>
+                                        <td> </td>
+                                        <td> <button type="submit" class="btn btn-primary" id="btn1" (click)=login();> Login </button> Or <button type="submit" class="btn btn-primary" id="btn1" (click)=signview();> Signup </button></td>
+                                    </tr>
+                                </table>
+                           
+                        </div>
+                    </div>
+                  </div>
+
+
+                  <div class="col col-12 col-sm-12 col-md-6 col-lg-6" *ngIf="regview">    
+                    <div class="card" id="card2">
+                        <h5 class="card-header text-center"> Sign Up </h5>
+                        <div class="card-body">
+                            <form action="/register" method="POST">
+                                <table class="table table-borderless">
+                                    <tr>
+                                        <td> Name </td>
+                                        <td> <input type="text" name="fname" class="form-control" [(ngModel)]="name" required> </td>
+                                    </tr><br>
+                                    <tr>
+                                        <td> Email </td>
+                                        <td> <input type="email" class="form-control" name="email" [(ngModel)]="email" required> </td>
+                                    </tr><br>
+                                    <tr>
+                                        <td> Username </td>
+                                        <td> <input type="text" class="form-control" name="username" [(ngModel)]="username" required> </td>
+                                    </tr><br>
+                                    <tr>
+                                        <td> Password </td>
+                                        <td> <input type="password"  class="form-control" name="password" [(ngModel)]="password" required > </td></tr><br>
+                                
+                                    <tr>
+                                        <td> </td>
+                                        <td> <button type="submit" class="btn btn-primary" (click)=signup();> Register </button>
+                                        Or <button type="button" class="btn btn-primary" (click)=loginview();> Login</button></td>
+                                    </tr>
+                                </table>
+                            </form>
+                        </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+        </div>
+      </div>
+                                                                                       
+	                                                
+                                                      
+   	</div><!--/col-12-->
+  </div>
+</div>
+                                                
+                                                                                
+<hr>
+
+
+<hr>
+
+<hr>
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <ul class="list-inline">
+          <li><i class="icon-facebook icon-2x"></i></li>
+          <li><i class="icon-twitter icon-2x"></i></li>
+          <li><i class="icon-google-plus icon-2x"></i></li>
+          <li><i class="icon-pinterest icon-2x"></i></li>
+        </ul>
+        
+      </div>
+      <div class="col-sm-6">
+          <p class="pull-right">Built with <i class="icon-heart-empty"></i> at <a href="http://www.bootply.com">Bootply</a></p>      
+      </div>
+    </div>
+  </div>
+</footer>

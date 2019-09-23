@@ -1,0 +1,68 @@
+<app-header></app-header>
+
+<div class="container">
+    <div class="row">
+      
+      <div class="col-md-12"> 
+        
+        <div class="panel">
+          <div class="panel-body">
+              <div class="card-body">
+                  <div class="row justify-content-center ">
+                      <div class="col col-12 col-sm-12 col-md-12 col-lg-12">    
+                          <div class="card" id="card2">
+                              <h5 class="card-header text-center"> Add Book </h5>
+                              <div class="card-body">
+                                  <form method="POST">
+                                      <table class="table table-borderless">
+                                          <tr>
+                                              <td> Title </td>
+                                              <td> <input type="text" name="title" [(ngModel)]="title" class="form-control" required > </td>
+                                          </tr>
+                                          <tr>
+                                              <td> Author </td>
+                                              <td> <input type="text" class="form-control" [(ngModel)]="author" name="author" required> </td>
+                                          </tr>
+                                          <tr>
+                                            <td> Genre </td>
+                                            <td> <input type="text" class="form-control" [(ngModel)]="genre" name="genre" required> </td>
+                                          </tr>
+                                          <tr>
+                                              <td> Description </td>
+                                              <td> <textarea class="form-control" name="description" [(ngModel)]="description" id="" cols="100" rows="5"></textarea> </td>
+                                          </tr>
+                                          <tr>
+                                              <td> Price </td>
+                                              <td> <input type="number" class="form-control" [(ngModel)]="price" name="price"> </td>
+                                          </tr>
+                                          <tr>
+                                              <td> Upload Image </td>
+                                              <td> <input type="file" class="form-control" name="file1" [(ngModel)]="file" ng2FileSelect [uploader] ="uploader" accept="image/*" required> </td>
+                                          </tr> <br>
+                                          <tr>
+                                              <td> </td>
+                                              <td> 
+                                                <input type="button" class= "btn btn-primary"  value="Click to add" (click)="uploader.uploadAll();newbook();" [disabled]="!uploader.getNotUploadedItems().length" />
+                                            </td>
+                                          </tr>
+                                      </table>
+                                  </form>
+                              </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+          </div>
+        </div>
+                                                                                         
+                                                      
+                                                        
+         </div><!--/col-12-->
+    </div>
+  </div>
+                                                  
+                                                                                  
+  <hr>
+  
+
+<app-footer></app-footer>
